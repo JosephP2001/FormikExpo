@@ -18,18 +18,17 @@ const Ex3 = () => {
     }),
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       try {
-        // Send data to backend/controller
-        // This is where Formik state is sent to the server
+
         const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(values) // Formik values sent as JSON
+          body: JSON.stringify(values) // -------------------> Formik values sent as JSON
         });
         
         const data = await response.json();
-        setApiResponse(data); // Save server response
+        setApiResponse(data); 
         resetForm();
         alert('Successfully sent! Check the response below.');
       } catch (error) {

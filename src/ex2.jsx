@@ -34,7 +34,7 @@ const Ex2 = () => {
 
   return (
     <div>
-      <h2>Form with Yup Validation - Registration</h2>
+      <h2>Registration</h2>
       <div className="form">
         <div className="form-group">
           <label htmlFor="name">Name:</label>
